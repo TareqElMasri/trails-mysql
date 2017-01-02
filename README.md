@@ -1,6 +1,6 @@
-# Sails-MySQL Adapter <a target="_blank" href="http://www.mysql.com"><img src="http://www.mysql.com/common/logos/powered-by-mysql-125x64.png" alt="Powered by MySQL" title="sails-mysql: MySQL adapter for Sails"/></a>
-[![Build Status](https://travis-ci.org/balderdashy/sails-mysql.svg?branch=master)](https://travis-ci.org/balderdashy/sails-mysql)
-[![npm version](https://badge.fury.io/js/sails-mysql.svg)](http://badge.fury.io/js/sails-mysql)
+# Trails-MySQL Adapter <a target="_blank" href="http://www.mysql.com"><img src="http://www.mysql.com/common/logos/powered-by-mysql-125x64.png" alt="Powered by MySQL" title="trails-mysql: MySQL adapter for Trailsjs"/></a>
+[![Build Status](https://travis-ci.org/balderdashy/trails-mysql.svg?branch=master)](https://travis-ci.org/balderdashy/trails-mysql)
+[![npm version](https://badge.fury.io/js/trails-mysql.svg)](http://badge.fury.io/js/trails-mysql)
 
 MySQL adapter for the Sails framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
 
@@ -12,7 +12,7 @@ Install from NPM.
 
 ```bash
 # In your app:
-$ npm install sails-mysql
+$ npm install trails-mysql
 ```
 
 ## Sails Configuration
@@ -20,22 +20,30 @@ $ npm install sails-mysql
 Add the mysql config to the config/connections.js file. Basic options:
 
 ```javascript
-module.exports.connections = {
-  mysql: {
-    module    : 'sails-mysql',
-    host      : 'localhost',
-    port      : 3306,
-    user      : 'username',
-    password  : 'password',
-    database  : 'MySQL Database Name'
+module.exports = {
+  stores: {
+    mysqlstore: {
+      module    : 'trails-mysql',
+      host      : 'localhost',
+      port      : 3306,
+      user      : 'username',
+      password  : 'password',
+      database  : 'MySQL Database Name'
 
-    // OR (explicit sets take precedence)
-    module    : 'sails-mysql',
-    url       : 'mysql2://USER:PASSWORD@HOST:PORT/DATABASENAME'
+      // OR (explicit sets take precedence)
+      module    : 'sails-mysql',
+      url       : 'mysql2://USER:PASSWORD@HOST:PORT/DATABASENAME'
 
-    // Optional
-    charset   : 'utf8',
-    collation : 'utf8_swedish_ci'
+      // Optional
+      migrate: 'alter',
+      charset   : 'utf8',
+      collation : 'utf8_swedish_ci'
+    }
+  },
+  
+  models: {
+    defaultStore: 'mysqlstore', 
+    migrate: 'alter'
   }
 };
 ```
@@ -76,11 +84,8 @@ Default settings are:
 
 #### More Resources
 
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/sails.js)
+- [Stackoverflow](http://stackoverflow.com/questions/tagged/trails.js)
 - [#sailsjs on Freenode](http://webchat.freenode.net/) (IRC channel)
-- [Twitter](https://twitter.com/sailsjs)
-- [Professional/enterprise](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#are-there-professional-support-options)
-- [Tutorials](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#where-do-i-get-help)
 - [Waterline (ORM)](http://github.com/balderdashy/waterline)
 - <a href="http://sailsjs.org" target="_blank" title="Node.js framework for building realtime APIs."><img src="https://github-camo.global.ssl.fastly.net/9e49073459ed4e0e2687b80eaf515d87b0da4a6b/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67" width=60 alt="Sails.js logo (small)"/></a>
 
