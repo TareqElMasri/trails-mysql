@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/balderdashy/trails-mysql.svg?branch=master)](https://travis-ci.org/balderdashy/trails-mysql)
 [![npm version](https://badge.fury.io/js/trails-mysql.svg)](http://badge.fury.io/js/trails-mysql)
 
-MySQL adapter for the Sails framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
+Trailsjs MySQL adapter is a fork of [Sails-MySQL](https://github.com/balderdashy/sails-mysql) modified and mintained for Trailjs framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
 
 
 
@@ -17,7 +17,7 @@ $ npm install trails-mysql
 
 ## Sails Configuration
 
-Add the mysql config to the config/connections.js file. Basic options:
+Add the mysql config to the config/database.js file. Basic options:
 
 ```javascript
 module.exports = {
@@ -39,20 +39,18 @@ module.exports = {
       charset   : 'utf8',
       collation : 'utf8_swedish_ci'
     }
-  },
-  
-  models: {
-    defaultStore: 'mysqlstore', 
-    migrate: 'alter'
   }
 };
 ```
 
-And then change default model configuration to the config/models.js:
+And then change default model configuration to the config/database.js:
 
 ```javascript
-module.exports.models = {
-  connection: 'mysql'
+module.exports = {
+  models: {
+    defaultStore: 'mysqlstore', 
+    migrate: 'alter'
+  }
 };
 ```
 
