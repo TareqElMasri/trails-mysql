@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/balderdashy/trails-mysql.svg?branch=master)](https://travis-ci.org/balderdashy/trails-mysql)
 [![npm version](https://badge.fury.io/js/trails-mysql.svg)](http://badge.fury.io/js/trails-mysql)
 
-Trailsjs MySQL adapter is a fork of [Sails-MySQL](https://github.com/balderdashy/sails-mysql) modified and mintained for Trailjs framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
+Trails-MySQL adapter is a fork of [Sails-MySQL](https://github.com/balderdashy/sails-mysql) modified and mintained for [Trails](http://trailsjs.io/) framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
 
 
 
