@@ -87,8 +87,6 @@ Default settings are:
 - [Stackoverflow](http://stackoverflow.com/questions/tagged/trails.js)
 - [#sailsjs on Freenode](http://webchat.freenode.net/) (IRC channel)
 - [Waterline (ORM)](http://github.com/balderdashy/waterline)
-- <a href="http://sailsjs.org" target="_blank" title="Node.js framework for building realtime APIs."><img src="https://github-camo.global.ssl.fastly.net/9e49073459ed4e0e2687b80eaf515d87b0da4a6b/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67" width=60 alt="Sails.js logo (small)"/></a>
-
 
 
 #### License
@@ -101,7 +99,4 @@ Default settings are:
 
 See the [MySQL Logo Usage Guidelines](http://www.mysql.com/about/legal/trademark.html) for more information on our use of the MySQL logo.
 
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
-
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/a22d3919de208c90c898986619efaa85 "githalytics.com")](http://githalytics.com/mikermcneil/sails-mysql)
+[![Trails.js](http://i.imgur.com/0iVVRxi.png)](http://trailsjs.io)
