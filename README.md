@@ -23,7 +23,7 @@ Add the mysql config to the config/database.js file. Basic options:
 module.exports = {
   stores: {
     mysqlstore: {
-      module    : require('trails-mysql'),
+      adapter   : require('trails-mysql'),
       host      : 'localhost',
       port      : 3306,
       user      : 'username',
@@ -31,11 +31,11 @@ module.exports = {
       database  : 'MySQL Database Name'
 
       // OR (explicit sets take precedence)
-      module    : 'sails-mysql',
+      adapter   : require('trails-mysql'),
       url       : 'mysql2://USER:PASSWORD@HOST:PORT/DATABASENAME'
 
       // Optional
-      migrate: 'alter',
+      migrate   : 'alter',
       charset   : 'utf8',
       collation : 'utf8_swedish_ci'
     }
